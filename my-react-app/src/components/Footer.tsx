@@ -1,9 +1,11 @@
+import logo from '../assets/logo_kasa_black.svg';
+
 export default function Footer() {
   return (
     <>
       <footer>
         <img
-          src="./logo_kasa_black.svg"
+          src={logo}
           alt="Logo Kasa"
           width={122}
           height={40}

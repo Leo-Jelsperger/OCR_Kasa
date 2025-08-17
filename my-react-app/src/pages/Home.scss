@@ -1,0 +1,63 @@
+#home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  margin-block: 30px;
+}
+
+#home-banner {
+  background-image: url('../assets/HomeBanner_img.webp');
+  height: 224px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  h1 {
+    height: 100%;
+    backdrop-filter: brightness(40%);
+    border-radius: 16px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#location-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  background: #f6f6f6;
+  border-radius: 25px;
+  padding: 60px;
+}
+
+#logement-card {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.logement-title {
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: end;
+  text-align: left;
+  padding: 20px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 143%;
+  background: #000000;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(10, 0, 0, 1) 100%);
+}
