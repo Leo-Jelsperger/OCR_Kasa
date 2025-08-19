@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.accordion {
+  background: $mainColor;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px 16px 16px;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  .chevron {
+    transition: all 0.2s;
+    i {
+      font-size: 24px;
+      transform: translateY(10%);
+    }
+    &.rotate {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.accordion-title {
+  @include secondaryText;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 1;
+  position: relative;
+}
+
+.accordion-text {
+  @include secondaryText;
+  text-align: start;
+  background: $greyBg;
+  border-radius: 10px;
+  padding: 0 32px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  margin-top: -10px;
+  z-index: -1;
+  position: relative;
+  li {
+    list-style-type: none;
+  }
+  &.open {
+    padding: 42px 32px 32px 32px;
+    max-height: 500px;
+  }
+}

@@ -1,20 +1,25 @@
 import {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {Navigate, useParams} from 'react-router-dom';
 import logements from '../../location-list.json';
-import './Logement.scss';
-import LogementBanner from '../components/LogementBanner';
+import LogementBanner from '../components/LogementBanner.tsx';
 import LogementTitle from '../components/LogementTitle';
 import LogementHost from '../components/LogementHost';
 import LogementTags from '../components/LogementTags';
 import LogementRating from '../components/LogementRating';
 import Accordion from '../components/Accordion';
+import Carousel from '../components/Carousel';
 
 export default function Logement() {
   const {id} = useParams<{id: string}>();
   const logement = logements.find((item) => item.id === id);
 
   if (!logement) {
-    return <div id="error-msg">Logement non trouvé</div>;
+    return (
+      <Navigate
+        to="/error"
+        replace
+      />
+    );
   }
 
   useEffect(() => {
@@ -28,10 +33,14 @@ export default function Logement() {
   return (
     <>
       <div id="main-container">
-        <LogementBanner
-          src={logement.cover}
-          title={logement.title}
-        />
+        {logement.pictures.length <= 1 ? (
+          <LogementBanner
+            src={logement.cover}
+            title={logement.title}
+          />
+        ) : (
+          <Carousel imgs={logement.pictures} />
+        )}
         <div id="logement-content">
           <LogementTitle
             title={logement.title}
@@ -48,15 +57,6 @@ export default function Logement() {
           <Accordion title="Équipements">{logement.equipments}</Accordion>
         </div>
       </div>
-      <script>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </script>
     </>
   );
 }

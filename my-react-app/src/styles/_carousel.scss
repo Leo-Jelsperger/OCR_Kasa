@@ -1,0 +1,30 @@
+@mixin btn {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  transform: translateY(-50%);
+  i {
+    font-size: 72px;
+    color: white;
+  }
+}
+
+#carousel {
+  position: relative;
+  img {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  #prev-btn {
+    @include btn;
+    left: 0%;
+  }
+  #next-btn {
+    @include btn;
+    right: 0%;
+  }
+}

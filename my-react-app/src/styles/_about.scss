@@ -1,0 +1,14 @@
+@use 'variables' as *;
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  margin-block: 30px;
+}
+
+#accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

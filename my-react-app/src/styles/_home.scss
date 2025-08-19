@@ -1,30 +1,10 @@
+@use 'variables' as *;
+
 #home-container {
   display: flex;
   flex-direction: column;
   gap: 43px;
   margin-block: 30px;
-}
-
-#home-banner {
-  background-image: url('../assets/HomeBanner_img.webp');
-  height: 224px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
-  h1 {
-    height: 100%;
-    backdrop-filter: brightness(40%);
-    border-radius: 16px;
-    font-size: 48px;
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 #location-gallery {

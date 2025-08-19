@@ -1,0 +1,17 @@
+$mainColor: #ff6060;
+$greyBg: #e3e3e3;
+
+@mixin title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 143%;
+  color: $mainColor;
+}
+
+@mixin secondaryText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 143%;
+}

@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#error-title {
+  color: $mainColor;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 288px;
+}
+
+#error-subtitle {
+  color: $mainColor;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+#error-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}

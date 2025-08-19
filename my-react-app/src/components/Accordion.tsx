@@ -9,8 +9,6 @@ export default function Accordion({title, children}: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-  const isArray = Array.isArray(children);
-
   return (
     <div>
       <div
