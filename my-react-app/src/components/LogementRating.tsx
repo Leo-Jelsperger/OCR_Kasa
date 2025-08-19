@@ -9,7 +9,7 @@ export default function LogementRating({rating}: Props) {
       {Array.from({length: 5}, (_, i) => (
         <span
           key={i}
-          style={{fontSize: '24px', color: stars > i ? '#ff6060' : '#e3e3e3'}}>
+          style={{color: stars > i ? '#ff6060' : '#e3e3e3'}}>
           <i className="fa-solid fa-star"></i>
         </span>
       ))}

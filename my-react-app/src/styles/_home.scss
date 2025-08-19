@@ -1,28 +1,35 @@
 @use 'variables' as *;
 
 #home-container {
-  display: flex;
-  flex-direction: column;
-  gap: 43px;
-  margin-block: 30px;
+  @include mainContainer;
 }
 
 #location-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  background: #f6f6f6;
-  border-radius: 25px;
-  padding: 60px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  @media screen and (min-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+    background: #f6f6f6;
+    border-radius: 25px;
+    padding: 60px;
+  }
+  @media screen and (min-width: 1025px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
 }
 
 #logement-card {
   width: 100%;
-  aspect-ratio: 1/1;
+  height: 255px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
+  @media screen and (min-width: 1025px) {
+    aspect-ratio: 1/1;
+  }
 }
 
 .logement-title {

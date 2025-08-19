@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-main {
+#error-container {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,18 +11,27 @@ main {
   color: $mainColor;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 288px;
+  font-size: 96px;
+  @media screen and (min-width: 769px) {
+    font-size: 288px;
+  }
 }
 
 #error-subtitle {
   color: $mainColor;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 18px;
+  @media screen and (min-width: 769px) {
+    font-size: 36px;
+  }
 }
 
 #error-link {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
+  @media screen and (min-width: 769px) {
+    font-size: 18px;
+  }
 }

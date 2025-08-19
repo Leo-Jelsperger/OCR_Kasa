@@ -1,5 +1,5 @@
 #banner {
-  height: 224px;
+  height: 111px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,13 +8,21 @@
     height: 100%;
     backdrop-filter: brightness(40%);
     border-radius: 16px;
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    text-align: start;
+    padding: 16px;
+    @media screen and (min-width: 769px) {
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    height: 224px;
+    font-size: 48px;
   }
 }

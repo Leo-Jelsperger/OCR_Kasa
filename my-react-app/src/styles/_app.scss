@@ -9,19 +9,32 @@
   padding: 0;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 main {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 20px;
   text-align: center;
-  height: 100%;
+  padding-inline: 20px;
   flex: 1;
+  @media screen and (min-width: 769px) {
+    padding: 20px;
+  }
 }
 
 header {
@@ -32,6 +45,12 @@ header {
 }
 
 nav {
+  img {
+    height: 48px;
+    @media screen and (min-width: 769px) {
+      height: 68px;
+    }
+  }
   ul {
     display: flex;
     list-style: none;
@@ -41,11 +60,19 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 60px;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  gap: 30px;
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 24px;
+    gap: 60px;
+    text-transform: capitalize;
+  }
+  @media sreen and (max-width: 1024px) {
+  }
 }
 
 .link {
@@ -60,7 +87,7 @@ nav {
 footer {
   height: 209px;
   background-color: black;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -68,4 +95,10 @@ footer {
   color: white;
   padding-bottom: 29px;
   gap: 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 24px;
+  }
 }

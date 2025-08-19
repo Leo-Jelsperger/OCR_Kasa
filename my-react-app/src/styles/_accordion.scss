@@ -4,10 +4,10 @@
   background: $mainColor;
   display: flex;
   justify-content: space-between;
-  padding: 16px 32px 16px 16px;
+  padding: 8px 32px 8px 16px;
   align-items: center;
   color: white;
-  border-radius: 10px;
+  border-radius: 5px;
   .chevron {
     transition: all 0.2s;
     i {
@@ -18,22 +18,25 @@
       transform: rotate(-180deg);
     }
   }
+  @media screen and (min-width: 769px) {
+    padding: 16px 32px 16px 16px;
+    border-radius: 10px;
+  }
 }
 
 .accordion-title {
-  @include secondaryText;
-  font-weight: 700;
+  font-weight: 700 !important;
   letter-spacing: 2px;
   z-index: 1;
   position: relative;
+  @include secondaryText;
 }
 
 .accordion-text {
-  @include secondaryText;
   text-align: start;
   background: $greyBg;
   border-radius: 10px;
-  padding: 0 32px;
+  padding: 0 16px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
@@ -44,7 +47,15 @@
     list-style-type: none;
   }
   &.open {
-    padding: 42px 32px 32px 32px;
+    padding: 26px 16px 16px 16px;
     max-height: 500px;
+  }
+  @include secondaryText;
+  @media screen and (min-width: 769px) {
+    padding: 0 32px;
+    &.open {
+      padding: 42px 32px 32px 32px;
+      max-height: 500px;
+    }
   }
 }
