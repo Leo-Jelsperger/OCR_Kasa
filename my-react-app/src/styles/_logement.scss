@@ -88,10 +88,17 @@
 
 .logement-tags {
   width: 100%;
+  max-width: calc(100vw - 40px);
   display: flex;
   gap: 10px;
   overflow-x: auto;
   white-space: nowrap;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.logement-tags::-webkit-scrollbar {
+  display: none;
 }
 
 .tag {
