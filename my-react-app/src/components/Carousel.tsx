@@ -32,6 +32,7 @@ export default function Carousel({imgs}: Props) {
             className={`fa-solid fa-chevron-up`}
             aria-hidden="true"></i>
         </button>
+        <p id="carousel-current">{`${current + 1} / ${imgs.length}`}</p>
       </div>
     </>
   );
