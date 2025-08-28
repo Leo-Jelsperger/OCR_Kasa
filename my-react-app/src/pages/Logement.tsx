@@ -42,24 +42,27 @@ export default function Logement() {
           <Carousel imgs={logement.pictures} />
         )}
         <div id="logement-presentation">
-          <div className='logement-presentation__col'>
-            <LogementTitle
-              title={logement.title}
-              location={logement.location}
-            />
-            <LogementTags tags={logement.tags} />
-          </div>
-          <div className='logement-presentation__row'>
-            <LogementHost
-              prenom={prenom}
-              nom={nom}
-              img={logement.host.picture}
-            />
-            <LogementRating rating={logement.rating} />
+          <div className="wrapper">
+            <div className="logement-presentation__col">
+              <LogementTitle
+                title={logement.title}
+                location={logement.location}
+              />
+              <LogementTags tags={logement.tags} />
+            </div>
+            <div className="logement-presentation__row">
+              <LogementHost
+                prenom={prenom}
+                nom={nom}
+                img={logement.host.picture}
+              />
+              <LogementRating rating={logement.rating} />
+            </div>
           </div>
           <div id="logement-accordions">
-          <Accordion title="Description">{logement.description}</Accordion>
-          <Accordion title="Équipements">{logement.equipments}</Accordion></div>
+            <Accordion title="Description">{logement.description}</Accordion>
+            <Accordion title="Équipements">{logement.equipments}</Accordion>
+          </div>
         </div>
       </div>
     </>

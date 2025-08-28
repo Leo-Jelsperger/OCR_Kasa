@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 #root {
@@ -27,6 +28,7 @@ body {
   flex: 1;
 }
 main {
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   text-align: center;
@@ -38,6 +40,7 @@ main {
 }
 
 header {
+  width: 100%;
   max-width: 1240px;
   padding: 20px;
   margin-inline: auto;
@@ -66,12 +69,10 @@ nav {
   font-size: 12px;
   text-transform: uppercase;
   gap: 30px;
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 769px) {
     font-size: 24px;
     gap: 60px;
     text-transform: capitalize;
-  }
-  @media sreen and (max-width: 1024px) {
   }
 }
 
@@ -98,7 +99,7 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 12px;
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 769px) {
     font-size: 24px;
   }
 }

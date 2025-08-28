@@ -10,8 +10,8 @@ export default function About() {
   return (
     <>
       <div id="about-container">
+        <Banner img={AboutBanner} />
         <div id="accordion-list">
-          <Banner img={AboutBanner} />
           <Accordion title="Fiabilité">
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont

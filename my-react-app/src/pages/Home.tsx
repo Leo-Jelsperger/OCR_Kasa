@@ -12,7 +12,9 @@ export default function Home() {
   return (
     <>
       <div id="home-container">
-        <Banner img={HomeBanner}>Chez vous, partout et ailleurs</Banner>
+        <Banner img={HomeBanner}>
+          Chez vous, <span>partout et ailleurs</span>
+        </Banner>
         <LocationGallery data={logements} />
       </div>
     </>
